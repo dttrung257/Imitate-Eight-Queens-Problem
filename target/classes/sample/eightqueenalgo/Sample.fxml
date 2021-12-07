@@ -45,22 +45,22 @@
             <Button layoutX="458.0" mnemonicParsing="false" onMouseClicked="#clearBoard" text="Clear Board" />
             <Slider fx:id="slider" layoutX="426.0" layoutY="147.0" max="2500.0" min="1.0" orientation="VERTICAL" prefHeight="153.0" prefWidth="14.0" value="500.0" />
             <Label fx:id="textSpeed" layoutX="421.0" layoutY="310.0" prefHeight="25.0" prefWidth="40.0" textFill="#2a11cc" />
-            <Label fx:id="textStep" layoutX="25.0" layoutY="435.0" text="A" textFill="#2a11cc">
+            <Label fx:id="textStep" layoutX="25.0" layoutY="435.0" textFill="#2a11cc">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="labelSpeed" layoutX="25.0" layoutY="470.0" text="A" textFill="#2a11cc">
+            <Label fx:id="labelSpeed" layoutX="25.0" layoutY="470.0" textFill="#2a11cc">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="textActionStep" layoutX="25.0" layoutY="505.0" text="A" textFill="#2a11cc">
+            <Label fx:id="textActionStep" layoutX="25.0" layoutY="505.0" textFill="#2a11cc">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="textSolution" layoutX="25.0" layoutY="405.0" text="A" textFill="#2a11cc">
+            <Label fx:id="textSolution" layoutX="25.0" layoutY="405.0" textFill="#2a11cc">
                <font>
                   <Font size="14.0" />
                </font>

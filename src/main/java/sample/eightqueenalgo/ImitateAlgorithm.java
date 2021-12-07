@@ -59,7 +59,7 @@ public class ImitateAlgorithm {
                     isSolution = true;
                     countSolution++;
                 }
-                actionOfStep = "Action: Put a Queen in (" + (8 - i + 1) + "," + Board.integerToCharacter(j) + ")";
+                actionOfStep = "Action: Put a Queen in row " + i + " in (" + (8 - i + 1) + "," + Board.integerToCharacter(j) + ")";
                 Controller.setPositionForImage(j, i - 1, i);
                 /*if (i == n) {
                     for (int k = 1; k <= n; k++) {
