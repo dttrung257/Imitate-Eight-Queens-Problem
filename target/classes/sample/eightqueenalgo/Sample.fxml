@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="546.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.eightqueenalgo.Controller">
+   <children>
+      <Pane fx:id="Board1" prefHeight="530.0" prefWidth="501.0">
+         <children>
+            <ImageView fitHeight="380.0" fitWidth="380.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Board.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="29.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#clickA" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: transparent;" text="+" />
+            <Button layoutX="69.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#clickB" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: transparent;" text="+" textFill="WHITE" />
+            <Button layoutX="111.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#clickC" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: transparent;" text="+" />
+            <Button layoutX="151.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#clickD" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: transparent;" text="+" textFill="WHITE" />
+            <Button layoutX="196.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#clickE" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: transparent;" text="+" />
+            <Button layoutX="234.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#clickF" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: transparent;" text="+" textFill="WHITE" />
+            <Button layoutX="277.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#clickG" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: transparent;" text="+" />
+            <Button layoutX="318.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#clickH" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: transparent;" text="+" textFill="WHITE" />
+            <Button layoutX="380.0" mnemonicParsing="false" onMouseClicked="#Create" text="Create" />
+         </children>
+      </Pane>
+      <Pane fx:id="Board2" prefHeight="546.0" prefWidth="536.0" visible="false">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Board.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="400.0" mnemonicParsing="false" onMouseClicked="#back" text="Back" />
+            <Button layoutX="399.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#Start" text="Start" />
+            <Button layoutX="400.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#stepAlgorithm" text="Step" />
+            <Button layoutX="400.0" layoutY="111.0" mnemonicParsing="false" onMouseClicked="#Stop" text="Stop" />
+            <Button layoutX="458.0" mnemonicParsing="false" onMouseClicked="#clearBoard" text="Clear Board" />
+            <Slider fx:id="slider" layoutX="426.0" layoutY="147.0" max="2500.0" min="1.0" orientation="VERTICAL" prefHeight="153.0" prefWidth="14.0" value="500.0" />
+            <Label fx:id="textSpeed" layoutX="421.0" layoutY="310.0" prefHeight="25.0" prefWidth="40.0" textFill="#2a11cc" />
+            <Label fx:id="textStep" layoutX="25.0" layoutY="435.0" text="A" textFill="#2a11cc">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSpeed" layoutX="25.0" layoutY="470.0" text="A" textFill="#2a11cc">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="textActionStep" layoutX="25.0" layoutY="505.0" text="A" textFill="#2a11cc">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="textSolution" layoutX="25.0" layoutY="405.0" text="A" textFill="#2a11cc">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ListView fx:id="Solution" layoutX="548.0" layoutY="67.0" onMouseClicked="#displaySolutionInBoard" prefHeight="307.0" prefWidth="258.0" visible="false" />
+      <Button layoutX="548.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#allSolution" prefHeight="26.0" prefWidth="165.0" text="Show all solution" />
+      <Button layoutX="713.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#clearSolution" prefHeight="26.0" prefWidth="94.0" text="Clear" />
+   </children>
+</AnchorPane>
