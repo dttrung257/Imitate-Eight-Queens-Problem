@@ -103,6 +103,9 @@ public class Controller implements Initializable {
             mySpeed = (int) slider.getValue();
             textSpeed.setText(Integer.toString(mySpeed));
         });
+        Algorithm al = new Algorithm();
+        al.Try(1, 8);
+        System.out.println(al.count);
     }
 
     @FXML
@@ -111,6 +114,7 @@ public class Controller implements Initializable {
         Board2.setVisible(true);
         Solution.setVisible(false);
         setImage(32);
+        System.out.println(pos.get(91));
     }
 
     @FXML
@@ -411,6 +415,7 @@ public class Controller implements Initializable {
         step = 1;
         countSolution = 0;
         isSolution = false;
+        stopped = false;
         textSolution.setText("");
         textStep.setText("");
         labelSpeed.setText("");
@@ -435,6 +440,7 @@ public class Controller implements Initializable {
         step = 1;
         countSolution = 0;
         isSolution = false;
+        stopped = false;
         textSolution.setText("");
         textStep.setText("");
         labelSpeed.setText("");
@@ -482,11 +488,26 @@ public class Controller implements Initializable {
         setImage(32);
         Board1.setVisible(false);
         Board2.setVisible(true);
+        if (step > 2056) {
+            step = 1;
+            stopped = false;
+            isSolution = false;
+            textStep.setText("");
+            textSolution.setText("");
+            labelSpeed.setText("");
+            countSolution = 0;
+        }
         Step(step);
         if (isSolution) {
-            String str = stringSolution.get(countSolution - 1);
-            str = str.substring(3);
-            textSolution.setText("Solution " + countSolution + ": " + str);
+            if (step < 1950) {
+                String str = stringSolution.get(countSolution - 1);
+                str = str.substring(3);
+                textSolution.setText("Solution " + countSolution + ": " + str);
+            } else {
+                String str = stringSolution.get(91);
+                str = str.substring(3);
+                textSolution.setText("Solution " + 92 + ": " + str);
+            }
             isSolution = false;
         } else {
             textSolution.setText("\t\t\t\tRunning ...");
@@ -495,7 +516,7 @@ public class Controller implements Initializable {
         textStep.setText("Step: " + (step - 1));
         labelSpeed.setText("Speed: " + saveSpeed);
         textActionStep.setText(actionOfStep);
-        System.out.println(mySpeed);
+        System.out.println(countSolution);
     }
 
     //@FXML

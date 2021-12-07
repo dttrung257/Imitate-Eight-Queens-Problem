@@ -13,7 +13,7 @@
 
 <AnchorPane prefHeight="546.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.eightqueenalgo.Controller">
    <children>
-      <Pane fx:id="Board1" prefHeight="530.0" prefWidth="501.0">
+      <Pane fx:id="Board1" prefHeight="546.0" prefWidth="502.0">
          <children>
             <ImageView fitHeight="380.0" fitWidth="380.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -43,8 +43,8 @@
             <Button layoutX="400.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#stepAlgorithm" text="Step" />
             <Button layoutX="400.0" layoutY="111.0" mnemonicParsing="false" onMouseClicked="#Stop" text="Stop" />
             <Button layoutX="458.0" mnemonicParsing="false" onMouseClicked="#clearBoard" text="Clear Board" />
-            <Slider fx:id="slider" layoutX="426.0" layoutY="147.0" max="2500.0" min="1.0" orientation="VERTICAL" prefHeight="153.0" prefWidth="14.0" value="500.0" />
-            <Label fx:id="textSpeed" layoutX="421.0" layoutY="310.0" prefHeight="25.0" prefWidth="40.0" textFill="#2a11cc" />
+            <Slider fx:id="slider" layoutX="426.0" layoutY="171.0" max="3000.0" min="1.0" orientation="VERTICAL" prefHeight="153.0" prefWidth="14.0" value="500.0" />
+            <Label fx:id="textSpeed" layoutX="426.0" layoutY="332.0" prefHeight="25.0" prefWidth="40.0" textFill="#2a11cc" />
             <Label fx:id="textStep" layoutX="25.0" layoutY="435.0" textFill="#2a11cc">
                <font>
                   <Font size="14.0" />
@@ -61,6 +61,11 @@
                </font>
             </Label>
             <Label fx:id="textSolution" layoutX="25.0" layoutY="405.0" textFill="#2a11cc">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="403.0" layoutY="147.0" text="Speed">
                <font>
                   <Font size="14.0" />
                </font>

@@ -51,13 +51,24 @@ public class ImitateAlgorithm {
                     break;
                 }
                 temp++;
-                if (step == pos.get(countSolution)) {
+                if (countSolution < 91 && step == pos.get(countSolution)) {
                     if (timeline != null) {
                         timeline.stop();
                     }
                     stopped = true;
                     isSolution = true;
                     countSolution++;
+                } else if (countSolution == 91 && step == pos.get(91)) {
+                    if (timeline != null) {
+                        timeline.stop();
+                    }
+                    stopped = true;
+                    isSolution = true;
+                }
+                if (step == 2056) {
+                    if (timeline != null) {
+                        timeline.stop();
+                    }
                 }
                 actionOfStep = "Action: Put a Queen in row " + i + " in (" + (8 - i + 1) + "," + Board.integerToCharacter(j) + ")";
                 Controller.setPositionForImage(j, i - 1, i);
